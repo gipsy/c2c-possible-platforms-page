@@ -4,7 +4,7 @@
     height: 90px;
     border-bottom:1px solid #eee;
   }
-  &__navLink {
+  &__navItem {
     font-size: 14px;
     position: relative;
     top: 3px;
@@ -17,7 +17,19 @@
         content: url(data:image/svg+xml;utf8;base64,IDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIj4gPHBhdGggZD0iTTQuOTQ1NTQgNS44NzkzNkw4LjgxNTI4IDIuMDA5NDlDOS4wNjE1NyAxLjc2MzMyIDkuMDYxNTcgMS4zNjQyIDguODE1MjggMS4xMTgxNUM4LjU2OTIxIDAuODcyMDc2IDguMTcwMTEgMC44NzIwNzYgNy45MjQwNiAxLjExODE1TDQuNDk5OTMgNC41NDIzOEwxLjA3NTkzIDEuMTE4MjVDMC44Mjk3NTkgMC44NzIxNzYgMC40MzA2OTcgMC44NzIxNzYgMC4xODQ2MjcgMS4xMTgyNUMtMC4wNjE1NDI0IDEuMzY0MzIgLTAuMDYxNTQyNCAxLjc2MzQyIDAuMTg0NjI3IDIuMDA5NTlMNC4wNTQ0MiA1Ljg3OTQ2QzQuMTc3NTIgNi4wMDI0OSA0LjMzODY4IDYuMDYzOTQgNC40OTk5MSA2LjA2Mzk0QzQuNjYxMjMgNi4wNjM5NCA0LjgyMjUxIDYuMDAyMzcgNC45NDU1NCA1Ljg3OTM2WiIgZmlsbD0iIzE4MjM1MyIvPjwvc3ZnPg==);
       }
       &.show:after {
-        content: url(data:image/svg+xml;utf8;base64,IDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIj48cGF0aCBkPSJNNC45NDU1NCAxLjEyMDY0TDguODE1MjggNC45OTA1MUM5LjA2MTU3IDUuMjM2NjggOS4wNjE1NyA1LjYzNTggOC44MTUyOCA1Ljg4MTg1QzguNTY5MjEgNi4xMjc5MiA4LjE3MDExIDYuMTI3OTIgNy45MjQwNiA1Ljg4MTg1TDQuNDk5OTMgMi40NTc2MkwxLjA3NTkzIDUuODgxNzVDMC44Mjk3NTkgNi4xMjc4MiAwLjQzMDY5NyA2LjEyNzgyIDAuMTg0NjI3IDUuODgxNzVDLTAuMDYxNTQyNCA1LjYzNTY4IC0wLjA2MTU0MjQgNS4yMzY1OCAwLjE4NDYyNyA0Ljk5MDQxTDQuMDU0NDIgMS4xMjA1NEM0LjE3NzUyIDAuOTk3NTA5IDQuMzM4NjggMC45MzYwNjEgNC40OTk5MSAwLjkzNjA2MUM0LjY2MTIzIDAuOTM2MDYxIDQuODIyNTEgMC45OTc2MjggNC45NDU1NCAxLjEyMDY0WiIgZmlsbD0iIzA3MjQ2RCIvPjwvc3ZnPg==);
+        @extend %shakeY;
+      }
+    }
+    .dropend & {
+      &.dropdown-toggle {
+        &:after {
+          position: absolute;
+          transform: rotate(-90deg);
+          right: 23px;
+        }
+        &.show:after {
+          @extend %shakeX;
+        }
       }
     }
   }
@@ -29,7 +41,6 @@
     margin: 0
   }
   &__navBtn {
-    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;

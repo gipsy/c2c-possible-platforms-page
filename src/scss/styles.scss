@@ -57,11 +57,11 @@ $dropdown-spacer: -0.125rem;
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/button-group";
- @import "~bootstrap/scss/nav";
- @import "~bootstrap/scss/navbar"; // Requires nav
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar"; // Requires nav
 // @import "~bootstrap/scss/card";
 // @import "~bootstrap/scss/breadcrumb";
-// @import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/accordion";
 // @import "~bootstrap/scss/pagination";
 // @import "~bootstrap/scss/badge";
 // @import "~bootstrap/scss/alert";
@@ -82,9 +82,14 @@ $dropdown-spacer: -0.125rem;
 
 // Custom colors
 @import "colors";
+
+// Animations
+@import "animations";
+
 //
 // Components
 //
-@import "~components/_footer";
-@import "~components/_header";
-@import "~components/_icon-list";
+@import "~components/header";
+@import "~components/footer";
+@import "~components/mobile";
+@import "~components/icon-list";

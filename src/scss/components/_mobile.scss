@@ -1,0 +1,71 @@
+.mobile {
+  &__navBody {
+    padding: 0;
+  }
+  &__accordionButton {
+    outline: none;
+    box-shadow: none;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &__navMenu {
+    list-style: none;
+    padding: .5rem 0;
+    margin: 0;
+  }
+  &__navItem {
+    @extend .navbar-toggler;
+    font-size: 16px;
+    width: 100%;
+    text-decoration: none;
+    &:hover {
+      color: $tropicalShades;
+    }
+    &--nested {
+      @extend .mobile__navItem;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: url(data:image/svg+xml;utf8;base64,IDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIj48cGF0aCBkPSJNNC45NDU1NCAxLjEyMDY0TDguODE1MjggNC45OTA1MUM5LjA2MTU3IDUuMjM2NjggOS4wNjE1NyA1LjYzNTggOC44MTUyOCA1Ljg4MTg1QzguNTY5MjEgNi4xMjc5MiA4LjE3MDExIDYuMTI3OTIgNy45MjQwNiA1Ljg4MTg1TDQuNDk5OTMgMi40NTc2MkwxLjA3NTkzIDUuODgxNzVDMC44Mjk3NTkgNi4xMjc4MiAwLjQzMDY5NyA2LjEyNzgyIDAuMTg0NjI3IDUuODgxNzVDLTAuMDYxNTQyNCA1LjYzNTY4IC0wLjA2MTU0MjQgNS4yMzY1OCAwLjE4NDYyNyA0Ljk5MDQxTDQuMDU0NDIgMS4xMjA1NEM0LjE3NzUyIDAuOTk3NTA5IDQuMzM4NjggMC45MzYwNjEgNC40OTk5MSAwLjkzNjA2MUM0LjY2MTIzIDAuOTM2MDYxIDQuODIyNTEgMC45OTc2MjggNC45NDU1NCAxLjEyMDY0WiIgZmlsbD0iIzA3MjQ2RCIvPjwvc3ZnPg==);
+        transform: rotate(90deg);
+        margin-left: 10px;
+        margin-top: 1px;
+      }
+    }
+  }
+  &__navAction {
+    padding: 0;
+  }
+  &__navActionBtn {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    transition: all 0.3s ease;
+    transition-property: background, color, box-shadow;
+    height: 40px;
+    &:hover {
+      box-shadow: 0 0 16px rgb(0 0 0 / 8%), -8px 4px 40px rgb(9 74 121 / 8%);
+    }
+
+    &.bg--white:hover {
+      color: #fff;
+      background: #4db1f9;
+    }
+    &.bg--tropicalShades {
+      color: #fff;
+      &:hover {
+        color: #fff;
+        background: #5363f4;
+      }
+    }
+  }
+}

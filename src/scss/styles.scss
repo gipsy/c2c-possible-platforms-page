@@ -31,10 +31,12 @@ $enable-shadows: true;
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 
 // Customize some defaults
+$font-family-base: "Poppins", sans-serif;
 $body-color: #333;
-$body-bg: #fff;
+$body-bg: #fcfcfc;
 $border-radius: .4rem;
 $success: #7952b3;
+$dropdown-spacer: -0.125rem;
 
 // Required
 @import "~bootstrap/scss/functions";
@@ -75,20 +77,14 @@ $success: #7952b3;
 @import "~bootstrap/scss/offcanvas"; // Requires transitions
 // @import "~bootstrap/scss/placeholders";
 
-// Helpers
-// @import "helpers";
-
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 
+// Custom colors
+@import "colors";
 //
 // Components
 //
 @import "~components/_footer";
 @import "~components/_header";
 @import "~components/_icon-list";
-
-
-body {
-  padding: 1.5rem;
-}

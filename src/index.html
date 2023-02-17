@@ -5,55 +5,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./assets/img/icon.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-  <link rel="stylesheet" href="./css/style.css" />
+  <!--  <link rel="stylesheet" href="./css/style.css" />-->
   <title>Cart2Cart - Possible platforms</title>
 </head>
 
 <body>
 <header class="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top header__nav">
+  <nav class="navbar navbar-expand-lg fixed-top header__nav">
     <div class="container">
-      <div class="header__logo"><a class="navbar-brand" href="./"></a></div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="header__logo">
+        <a class="navbar-brand" href="./">
+          <picture>
+            <source type="image/svg+xml" srcset="./svg/cart2cart_logo_min.svg">
+            <img src="./svg/cart2cart_logo_min.svg" alt="cart2cart logo" height="44" width="170">
+          </picture>
+        </a>
+      </div>
+      <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle header__navLink" href="./">Cart migration</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item header__navLink" href="#">Shopify</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">WooCommerce</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">Magento</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">PrestaShop</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">OpenCart</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">BigCommerce</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">Wix</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">Shopware</a></li>
+          <li class="nav-item dropdown navbarJS__item">
+            <a class="nav-link dropdown-toggle header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_cart_migration">Cart migration</a>
+            <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_cart_migration">
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_shopify">Shopify</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_shopify">
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">BigCommerce to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Squarespace to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Volusion to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Wix to Shopify</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_woocommerce">WooCommerce</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_woocommerce">
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce upgrade</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Shopify to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">VirtueMart to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">BigCommerce to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to WooCommerce</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Wix to WooCommerce</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_magento">Magento</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_magento">
+                  <li><a class="dropdown-item header__navLink" href="#">Magento upgrade</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to Magento</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to Magento</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to Magento</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Shopify to Magento</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">BigCommerce to Magento</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Squarespace to Magento</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_prestashop">PrestaShop</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_prestashop">
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop upgrade</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to PrestaShop</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_opencart">OpenCart</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_opencart">
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop upgrade</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to PrestaShop</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_bigcommerce">BigCommerce</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_bigcommerce">
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop upgrade</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to PrestaShop</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to PrestaShop</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_wix">Wix</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_wix">
+                  <li><a class="dropdown-item header__navLink" href="#">Shopify to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">SquareSpace to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to Wix</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_shopware">Shopware</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_shopware">
+                  <li><a class="dropdown-item header__navLink" href="#">Shopify to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">SquareSpace to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to Wix</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to Wix</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item header__navLink" href="#">more migration choices</a></li>
+                </ul>
+              </li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item header__navLink" href="#">See all 80+ carts</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_migration_plugins">Migration Plugins</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_migration_plugins">
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Wix to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to Shopify</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to Shopify</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle header__navLink" href="./about.html">Store upgrade</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item header__navLink" href="#">Magento upgrade</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">PrestaShop upgrade</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">OpenCart upgrade</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">WooCommerce upgrade</a></li>
+          <li class="nav-item dropdown navbarJS__item">
+            <a class="nav-link dropdown-toggle header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_store_upgrade">Store upgrade</a>
+            <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_store_upgrade">
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_magento_upgrade">Magento upgrade</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_magento_upgrade">
+                  <li><a class="dropdown-item header__navLink" href="#">Magento 1.9 to 2.3</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento 1.8 to 2.3</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to 2.3</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to 2.2</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">Magento to 2.1</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend header__navItem--dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_prestashop_upgrade">PrestaShop upgrade</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_prestashop_upgrade">
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop 1.6 to 1.7</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to 1.7</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">PrestaShop to 1.6</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend  navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_opencart_upgrade">OpenCart upgrade</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_opencart_upgrade">
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart 2.x to 3</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to 3</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to 2.1</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">OpenCart to 2.0</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropend navbarJS__item--nested">
+                <a class="dropdown-item header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_woocommerce_upgrade">WooCommerce upgrade</a>
+                <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_woocommerce_upgrade">
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to 4.0</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to 3.7</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to 3.6</a></li>
+                  <li><a class="dropdown-item header__navLink" href="#">WooCommerce to 3.5</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle header__navLink" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li class="nav-item dropdown navbarJS__item">
+            <a class="nav-link dropdown-toggle header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_services">Services</a>
+            <ul class="dropdown-menu header__navMenu" aria-labelledby="nav_services">
               <li><a class="dropdown-item header__navLink" href="#">Data migration packages</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">Another action</a></li>
-              <li><a class="dropdown-item header__navLink" href="#">Something else here</a></li>
+              <li><a class="dropdown-item header__navLink" href="#">Recent data migration</a></li>
+              <li><a class="dropdown-item header__navLink" href="#">Migration preview</a></li>
+              <li><a class="dropdown-item header__navLink" href="#">File data migration (*.csv)</a></li>
+              <li><a class="dropdown-item header__navLink" href="#">Database dump migration</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link header__navLink" href="#" role="button">Pricing</a>
-          </li>
+          <li class="nav-item"><a class="nav-link header__navLink" href="#" role="button">Pricing</a></li>
+        </ul>
+
+        <ul class="d-flex flex-row header__navAction">
+          <li class="d-inline-flex"><a class="rounded-1 header__navBtn bg--white" href="#">Log in</a></li>
+          <li class="d-inline-flex"><a class="rounded-1 header__navBtn bg--tropicalShades" href="#">Try it free</a></li>
         </ul>
       </div>
     </div>
@@ -67,27 +214,43 @@
     <p>If this button appears blue and the link appears purple, you've done it!</p>
   </div>
 
-  <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-  <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
-
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobile_nav" aria-labelledby="mobile_nav_label">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <h5 class="offcanvas-title" id="mobile_nav_label">Offcanvas</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-      </div>
-      <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
+      <div class="accordion accordion-flush" id="mobile_nav_accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

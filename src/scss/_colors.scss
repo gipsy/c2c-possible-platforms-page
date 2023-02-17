@@ -1,0 +1,20 @@
+.bg {
+  &--white {
+    background: #FFF
+  }
+  &--glossyBlue {
+    background: #00AEEF;
+  }
+  &--seasideWaves {
+    background: #5DC2E1;
+  }
+  &--tropicalShades {
+    background: #77B747;
+  }
+  &--gradient--seasideWaves {
+    background: linear-gradient(116.3deg, #5DC2E1 15.03%, #0596C4 66.45%);
+  }
+  &--gradient--tropicalShades {
+    background: linear-gradient(146.34deg, #77B747 2.44%, #70BF35 56.41%, #77B747 100%);
+  }
+}

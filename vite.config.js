@@ -5,7 +5,7 @@ export default {
   resolve: {
     alias: {
       '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-      '~components': path.resolve(__dirname, 'src/scss/components')
+      '~components': path.resolve(__dirname, 'src/scss/components'),
     }
   },
   server: {

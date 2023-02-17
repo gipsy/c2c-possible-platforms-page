@@ -21,11 +21,11 @@
           </picture>
         </a>
       </div>
-      <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
+      <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobileNav_offCanvas" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbar_content">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown navbarJS__item">
             <a class="nav-link dropdown-toggle header__navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_cart_migration">Cart migration</a>
@@ -208,37 +208,84 @@
 </header>
 
 <section>
-  <h1>Build Bootstrap with Vite</h1>
-  <div class="col-lg-8 px-0">
-    <p class="fs-4">You've successfully loaded the Bootstrap + Vite example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Vite to compile and bundle our Sass and JavaScript.</p>
-    <p>If this button appears blue and the link appears purple, you've done it!</p>
-  </div>
-
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobile_nav" aria-labelledby="mobile_nav_label">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav_offCanvas" aria-labelledby="mobileNav_offCanvas_label">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="mobile_nav_label">Offcanvas</h5>
+      <h5 class="offcanvas-title" id="mobileNav_offCanvas_label">Off canvas</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <div class="accordion accordion-flush" id="mobile_nav_accordion">
+      <div class="accordion accordion-flush" id="mobileNav_accordion">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
+          <h2 class="accordion-header" id="mobileNav_accordion_cartMigration_heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav_accordionCollapse_cartMigration" aria-expanded="false" aria-controls="mobileNav_accordionCollapse_cartMigration">
+              Cart migration
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          <div id="mobileNav_accordionCollapse_cartMigration" class="accordion-collapse collapse" aria-labelledby="mobileNav_accordion_cartMigration_heading" data-bs-parent="#mobileNav_accordion">
+            <div class="accordion-body">
+              <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobileNav_nested_first_level" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
+          <h2 class="accordion-header" id="mobileNav_accordion_storeUpgrade_heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav_accordionCollapse_storeUpgrade" aria-expanded="false" aria-controls="mobileNav_accordionCollapse_storeUpgrade">
+              Store upgrade
             </button>
           </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          <div id="mobileNav_accordionCollapse_storeUpgrade" class="accordion-collapse collapse" aria-labelledby="mobileNav_storeUpgrade_heading" data-bs-parent="#mobileNav_accordion">
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="mobileNav_accordion_services_heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav_accordionCollapse_services" aria-expanded="false" aria-controls="mobileNav_accordionCollapse_services">
+              Services
+            </button>
+          </h2>
+          <div id="mobileNav_accordionCollapse_services" class="accordion-collapse collapse" aria-labelledby="mobileNav_accordion_services_heading" data-bs-parent="#mobileNav_accordion">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobile_nav_offcanvas_nested" aria-labelledby="mobile_nav_offcanvas_label">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobile_nav_offcanvas_nested_label">Cart migration</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="accordion accordion-flush" id="mobile_nav_accordion_nested">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="mobile_nav_accordion_nested_heading_shopify">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_nav_accordion_nested_collapse_shopify" aria-expanded="false" aria-controls="mobile_nav_offset_nested_shopify">
+              Shopify
+            </button>
+          </h2>
+          <div id="mobile_nav_accordion_nested_collapse_shopify" class="accordion-collapse collapse" aria-labelledby="mobile_nav_accordion_nested_heading_shopify" data-bs-parent="#mobile_nav_accordion_nested">
+            <div class="accordion-body">
+              <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobile_nav_offcanvas_nested" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="mobile_nav_store_upgrade_heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_nav_store_upgrade" aria-expanded="false" aria-controls="mobile_nav_store_upgrade">
+              Store upgrade
+            </button>
+          </h2>
+          <div id="mobile_nav_store_upgrade" class="accordion-collapse collapse" aria-labelledby="mobile_nav_store_upgrade_heading" data-bs-parent="#mobile_nav_accordion">
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+            </div>
           </div>
         </div>
         <div class="accordion-item">
@@ -254,7 +301,6 @@
       </div>
     </div>
   </div>
-
   <hr class="col-1 my-5 mx-0">
 
   <h2>Guides</h2>

@@ -1,0 +1,68 @@
+.platformAlphabetFilter {
+  &__choiceList {
+    padding: 20px 36px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #F3F7F8;
+    box-shadow: 0px -50px 80px rgba(0, 0, 0, 0.03), 0px 50px 80px rgba(0, 0, 0, 0.04);
+    > li {
+      cursor: pointer;
+      > a {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $deep-blue;
+        position: relative;
+        text-decoration: none;
+        // left event only on parent li
+        pointer-events: none;
+      }
+      &:hover > a {
+        color: $glossy-blue;
+      }
+      &.active > a {
+        color: $glossy-blue;
+      }
+      .active > a:after {
+        content: " ";
+        position: absolute;
+        bottom: -21px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: $glossy-blue;
+      }
+    }
+  }
+  &__results {
+    margin-top: 55px;
+  }
+  &__row {
+    margin-bottom: 55px;
+  }
+  &__letter {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $deep-blue;
+  }
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $deep-blue;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: $glossy-blue;
+    }
+  }
+}

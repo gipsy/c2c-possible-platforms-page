@@ -43,6 +43,7 @@ async function renderPlatformSearchResults(target) {
         target.classList.remove('show');
     }, false);
 
+    // #TODO in real situation request should be performed on user input, probably by deferred call
     const data = await getPlatforms();
     const renderColumn = (platforms, colIdx, colAmount, input = '') => {
         const perColumn = Math.ceil(platforms.length / colAmount);
@@ -53,7 +54,7 @@ async function renderPlatformSearchResults(target) {
     }
 
     let filteredPlatforms = [];
-    let resultHtml = document.createElement('div');
+    const resultHtml = document.createElement('div');
     resultHtml.className = 'platformSearchFilter__results';
     oninput = (event) => {
         const input = event.target.value;
@@ -76,7 +77,87 @@ async function renderPlatformSearchResults(target) {
     };
 }
 
+async function renderPlatformAlphabetResults(target) {
+    const data = await getPlatforms();
+
+    const resultHtml = document.createElement('div');
+    resultHtml.className = 'platformAlphabetFilter__results';
+    let showCompactResults = true;
+    function makeChoice(e) {
+        const {target} = e;
+        const choiceItems = this.getElementsByTagName('li');
+
+        for (let item of choiceItems) {
+            item.classList.remove('active')
+        }
+        if (target.matches('li')) {
+            target.className = 'active';
+        }
+
+        const choice = target.getElementsByTagName('a')[0].textContent;
+        const results = choice.length === 0 || choice === 'All'
+            ? data.platforms
+            : data.platforms.filter(platform => platform.toUpperCase().startsWith(choice))
+
+        const groupedResults = (results) => results.reduce((store, word) => {
+            const letter = word.charAt(0).toUpperCase()
+            const keyStore = (
+                store[letter] ||     // Does it exist in the object?
+                (store[letter] = []) // If not, create it as an empty array
+            );
+            keyStore.push(word)
+
+            return store
+        }, {})
+
+        const renderColumn = (platforms, colIdx, colAmount) => {
+            const perColumn = Math.ceil(platforms.length / colAmount);
+            const results = platforms.slice(colIdx * perColumn, (colIdx + 1) * perColumn);
+
+            return results.map(item => `<a class="platformAlphabetFilter__item" href="#">${item}</a>`).join("\n")
+        }
+        const template = (k) => `
+            <div class="row platformAlphabetFilter__row">
+                <div class="col-3">
+                    <div class="platformAlphabetFilter__letter">${k}</div>
+                </div>
+                <div class="col-3">
+                    ${renderColumn(groupedResults(results)[k], 0, 3)}
+                </div>
+                <div class="col-3">
+                    ${renderColumn(groupedResults(results)[k], 1, 3)}
+                </div>
+                <div class="col-3">
+                    ${renderColumn(groupedResults(results)[k], 2, 3)}
+                </div>
+            </div>
+        `;
+        resultHtml.innerHTML = Object.keys(groupedResults(results))
+            .map((k, i) => {
+                if (showCompactResults) {
+                    return i < 3 ? template(k) : null
+                }
+                return template(k)
+            }).sort().join('\n');
+
+        this.after(resultHtml)
+    }
+    target.querySelector('ul').addEventListener('click', makeChoice, false);
+    const initChoice = () => target.querySelector('ul')
+        .getElementsByTagName('li')[0].click();
+
+    initChoice()
+    function toggleShowCompactResults() {
+        showCompactResults = !showCompactResults;
+        showCompactResults ? this.textContent = 'Load more' : this.textContent = 'Load less';
+        initChoice();
+    }
+    target.querySelector('.buttonJS__showMore')
+        .addEventListener('click', toggleShowCompactResults,false);
+}
+
 
 // init
 renderPlatformSearchResults(document.querySelector('.platformSearchFilterJS'));
+renderPlatformAlphabetResults(document.querySelector('.platformAlphabetFilterJS'));
 

@@ -1,46 +1,56 @@
 $light-white: #E2FDFF;
+$light-gray: #E5E5E5;
 $glossy-blue: #00AEEF;
 $seaside-waves: #5DC2E1;
 $tropical-shades: #77B747;
 $deep-blue: #182353;
 $matte-deep-blue: #6B7496;
-$stormy-green: #77B747;
 
 .bg {
   &--white {
     background: #FFF;
   }
+  &--light-white {
+    background: $light-white;
+  }
+  &--light-gray {
+    background: $light-gray;
+  }
   &--deep-blue {
-    background: #182353;
+    background: $deep-blue;
   }
   &--matte-deep-blue {
-    background: #6B7496;
+    background: $matte-deep-blue;
   }
   &--glossyBlue {
-    background: #00AEEF;
+    background: $glossy-blue;
   }
   &--seasideWaves {
-    background: #5DC2E1;
+    background: $seaside-waves;
   }
   &--tropicalShades {
-    background: #77B747;
+    background: $tropical-shades;
   }
   &--gradient--seasideWaves {
     background-color: $seaside-waves;
     background: linear-gradient(116.3deg, #5DC2E1 15.03%, #0596C4 66.45%);
   }
   &--gradient--tropicalShades {
+    background-color: $tropical-shades;
     background: linear-gradient(146.34deg, #77B747 2.44%, #70BF35 56.41%, #77B747 100%);
   }
 }
 .text {
   &--lightWhite {
-    color: #E2FDFF;
+    color: $light-white;
+  }
+  &--lightGray {
+    color: $light-gray;
   }
   &--deep-blue {
-    color: #182353;
+    color: $deep-blue;
   }
   &--matte-deep-blue {
-    color: #6B7496;
+    color: $matte-deep-blue;
   }
 }

@@ -45,7 +45,7 @@
     background: white;
     border-radius: 20px;
     margin: 0 auto;
-    text-indent: 30px;
+    padding: 20px 28px;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -93,7 +93,7 @@
     text-decoration: none;
     display: block;
     .highlight {
-      color: $stormy-green;
+      color: $tropical-shades;
     }
     &:hover {
       color: $glossy-blue;

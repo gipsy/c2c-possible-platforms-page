@@ -1,0 +1,20 @@
+.button {
+  &__primary {
+    background: $glossy-blue;
+  }
+  &__secondary {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-color: $tropical-shades;
+    color: $tropical-shades;
+    min-width: 262px;
+    height: 54px;
+    &:hover {
+      background: $tropical-shades;
+      border-color: $tropical-shades;
+      color: white;
+    }
+  }
+}

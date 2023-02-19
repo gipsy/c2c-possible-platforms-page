@@ -21,7 +21,7 @@
     width: 100%;
     text-decoration: none;
     &:hover {
-      color: $tropicalShades;
+      color: $tropical-shades;
     }
     &--nested {
       @extend .mobile__navItem;

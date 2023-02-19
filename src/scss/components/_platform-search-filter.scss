@@ -1,0 +1,119 @@
+.platformSearchFilter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 47px;
+  justify-content: center;
+  z-index: 1;
+  &.show {
+    .platformSearchFilter__results {
+      display: block;
+    }
+    .platformSearchFilter__input {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .platformSearchFilter__inputClear {
+      display: block;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__inputClear {
+    display: none;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    stroke: $deep-blue;
+    z-index: 1;
+    &:hover {
+      stroke: $glossy-blue;
+    }
+  }
+
+  &__input {
+    color: $deep-blue;
+    height: 80px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-indent: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 0;
+    z-index: 1;
+    &::placeholder {
+      color: $matte-deep-blue;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__results {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $deep-blue;
+    max-height: 273px;
+    text-align: left;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    padding: 20px 30px;
+    overflow: auto;
+    display: none;
+    position: relative;
+    &:before {
+      content: '';
+      height: 1px;
+      left: 30px;
+      right: 30px;
+      background-color: #02aeef;
+      position: absolute;
+      top: 0;
+    }
+  }
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $deep-blue;
+    text-decoration: none;
+    display: block;
+    .highlight {
+      color: $stormy-green;
+    }
+    &:hover {
+      color: $glossy-blue;
+      .highlight {
+        color: inherit;
+      }
+    }
+  }
+  &__note {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $matte-deep-blue;
+    margin: 1rem 0 0;
+    a {
+      color: $matte-deep-blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

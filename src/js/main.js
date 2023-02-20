@@ -151,13 +151,13 @@ async function renderPlatformAlphabetResults(target) {
                 </div>
             </div>
         `;
-        resultHtml.innerHTML = Object.keys(groupedResults(results))
+        resultHtml.innerHTML = Object.keys(groupedResults(results)).sort()
             .map((k, i) => {
                 if (showCompactResults) {
                     return i < 3 ? template(k) : null
                 }
                 return template(k)
-            }).sort().join('\n');
+            }).join('\n');
 
         this.parentNode.after(resultHtml)
     }

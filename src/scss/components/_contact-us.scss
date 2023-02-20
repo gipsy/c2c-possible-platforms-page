@@ -1,0 +1,101 @@
+.contactUs {
+  &__body {
+    padding-top: 45px;
+    color: #fff;
+    h3 {
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 56px;
+    }
+    h4 {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+  }
+  &__personBlock {
+    margin-top: 20px;
+    border-left: 1px solid #fff;
+    padding-left: 15px;
+  }
+  &__personName {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 50px;
+    color: #fff;
+    margin: 0
+  }
+  &__personOccupation {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  &__contactBlock {
+    margin-top: 40px;
+    padding: 32px 45px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__readyText {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $deep-blue;
+  }
+  &__clickButton {
+    padding-right: 60px;
+    position: relative;
+    background-color: $tropical-shades;
+    border-color: $tropical-shades;
+    width: 320px;
+    height: 55px;
+    color: #fff;
+    &:hover {
+      background-color: $tropical-shades--hover;
+      border-color: $tropical-shades--hover;
+    }
+    span {
+      background: url('../svg/click.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: $tropical-shades--hover;
+      width: 60px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &__callButton {
+    padding-right: 60px;
+    position: relative;
+    color: $tropical-shades;
+    border-color: $tropical-shades;
+    width: 320px;
+    height: 55px;
+    margin-left: 15px;
+    span {
+      background-image: url('../svg/call.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 60px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &:hover {
+      background-color: $tropical-shades--hover;
+      border-color: $tropical-shades--hover;
+      span {
+        background-image: url('../svg/call_white.svg');
+      }
+    }
+  }
+}

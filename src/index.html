@@ -230,36 +230,40 @@
 <section class="section__alphabetFilterPlatform">
   <div class="container">
     <div class="platformAlphabetFilterJS">
-      <ul class="platformAlphabetFilter__choiceList platformAlphabetFilterJS__choiceList">
-        <li><a href="#">All</a></li>
-        <li><a href="#">A</a></li>
-        <li><a href="#">B</a></li>
-        <li><a href="#">C</a></li>
-        <li><a href="#">D</a></li>
-        <li><a href="#">E</a></li>
-        <li><a href="#">F</a></li>
-        <li><a href="#">G</a></li>
-        <li><a href="#">H</a></li>
-        <li><a href="#">I</a></li>
-        <li><a href="#">J</a></li>
-        <li><a href="#">K</a></li>
-        <li><a href="#">L</a></li>
-        <li><a href="#">M</a></li>
-        <li><a href="#">N</a></li>
-        <li><a href="#">O</a></li>
-        <li><a href="#">P</a></li>
-        <li><a href="#">Q</a></li>
-        <li><a href="#">R</a></li>
-        <li><a href="#">S</a></li>
-        <li><a href="#">T</a></li>
-        <li><a href="#">U</a></li>
-        <li><a href="#">V</a></li>
-        <li><a href="#">W</a></li>
-        <li><a href="#">X</a></li>
-        <li><a href="#">Y</a></li>
-        <li><a href="#">Z</a></li>
-        <li><a href="#">0-9</a></li>
-      </ul>
+      <div class="platformAlphabetFilterJS__choiceList">
+        <div class="overflow-auto">
+          <ul class="platformAlphabetFilter__choiceList">
+            <li><a href="#">All</a></li>
+            <li><a href="#">A</a></li>
+            <li><a href="#">B</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">D</a></li>
+            <li><a href="#">E</a></li>
+            <li><a href="#">F</a></li>
+            <li><a href="#">G</a></li>
+            <li><a href="#">H</a></li>
+            <li><a href="#">I</a></li>
+            <li><a href="#">J</a></li>
+            <li><a href="#">K</a></li>
+            <li><a href="#">L</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">N</a></li>
+            <li><a href="#">O</a></li>
+            <li><a href="#">P</a></li>
+            <li><a href="#">Q</a></li>
+            <li><a href="#">R</a></li>
+            <li><a href="#">S</a></li>
+            <li><a href="#">T</a></li>
+            <li><a href="#">U</a></li>
+            <li><a href="#">V</a></li>
+            <li><a href="#">W</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">Y</a></li>
+            <li><a href="#">Z</a></li>
+            <li><a href="#">0-9</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="text-center">
         <button class="btn btn-outline-secondary button__secondary buttonJS__showMore">Load more</button>
       </div>
@@ -270,10 +274,10 @@
 <section class="section__contactUs">
   <div class="container">
     <div class="row">
-      <div class="col-5">
-        <img src="./img/contact_us.png" alt="contact us"/>
+      <div class="col-12 col-lg-5">
+        <img class="w-100" src="./img/contact_us.png" alt="contact us"/>
       </div>
-      <div class="col-7">
+      <div class="col-12 col-lg-5">
         <div class="contactUs__body">
           <h3>Don’t see what you’re looking for?</h3>
           <h4>Talk to one one of our experts and get all your questions answered</h4>
@@ -300,19 +304,19 @@
   <div class="container">
     <div class="siteMap">
       <div class="row">
-        <div class="col-3">
+        <div class="col col-12 col-lg-3">
           <h4 class="siteMap__heading">Information</h4>
           <ul class="siteMap__list">
-            <li><a href="">How it works</a></li>
-            <li><a href="">Terms of Service</a></li>
-            <li><a href="">Service Level Agreement</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Security Policy</a></li>
-            <li><a href="">GDPR</a></li>
-            <li><a href="">Copyright & Trademark Policy</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Service Level Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Security Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Copyright & Trademark Policy</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col col-12 col-lg-3">
           <h4 class="siteMap__heading">Support center</h4>
           <ul class="siteMap__list">
             <li><a href="#">FAQ</a></li>
@@ -321,7 +325,7 @@
             <li><a href="#">Video tutorials</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col col-12 col-lg-3">
           <h4 class="siteMap__heading">For partners</h4>
           <ul class="siteMap__list">
             <li><a href="#">Become a partner</a></li>
@@ -330,8 +334,83 @@
             <li><a href="#">Technology Partners</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col col-lg-3">
           <h4 class="siteMap__heading">Company</h4>
+          <ul class="siteMap__list">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Provided services</a></li>
+            <li><a href="#">Customer testimonials</a></li>
+            <li><a href="#">Cart2Cart timeline</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section__siteMap--mobile">
+  <div class="accordion" id="accordion_siteMap">
+    <div class="accordion-item siteMap__accordionItem">
+      <h2 class="accordion-header" id="siteMap__accordionHeading__information">
+        <button class="accordion-button siteMap__accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#siteMap__accordionCollapse__information" aria-expanded="true" aria-controls="siteMap__accordionCollapse__supportCenter">
+          Information
+        </button>
+      </h2>
+      <div id="siteMap__accordionCollapse__information" class="accordion-collapse collapse show" aria-labelledby="siteMap__accordionHeading__information" data-bs-parent="#accordion_siteMap">
+        <div class="accordion-body">
+          <ul class="siteMap__list">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Service Level Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Security Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Copyright & Trademark Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item siteMap__accordionItem">
+      <h2 class="accordion-header" id="siteMap__accordion_accordionHeading__supportCenter">
+        <button class="accordion-button collapsed siteMap__accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#siteMap__accordionCollapse__supportCenter" aria-expanded="false" aria-controls="siteMap__accordionCollapse__supportCenter">
+          Support center
+        </button>
+      </h2>
+      <div id="siteMap__accordionCollapse__supportCenter" class="accordion-collapse collapse" aria-labelledby="siteMap__accordionHeading__supportCenter" data-bs-parent="#accordion_siteMap">
+        <div class="accordion-body">
+          <ul class="siteMap__list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Submit a ticket</a></li>
+            <li><a href="#">Migration packages</a></li>
+            <li><a href="#">Video tutorials</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item siteMap__accordionItem">
+      <h2 class="accordion-header" id="siteMap__accordionHeading__forPartners">
+        <button class="accordion-button collapsed siteMap__accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#siteMap__accordionCollapse__forPartners" aria-expanded="false" aria-controls="siteMap__accordionCollapse__forPartners">
+          For partners
+        </button>
+      </h2>
+      <div id="siteMap__accordionCollapse__forPartners" class="accordion-collapse collapse" aria-labelledby="siteMap__accordionHeading__forPartners" data-bs-parent="#accordion_siteMap">
+        <div class="accordion-body">
+          <ul class="siteMap__list">
+            <li><a href="#">Become a partner</a></li>
+            <li><a href="#">Affiliate Partner Program</a></li>
+            <li><a href="#">Featured Partners</a></li>
+            <li><a href="#">Technology Partners</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item siteMap__accordionItem">
+      <h2 class="accordion-header" id="siteMap__accordionHeading__company">
+        <button class="accordion-button collapsed siteMap__accordionButton" type="button" data-bs-toggle="collapse" data-bs-target="#siteMap__accordionCollapse__company" aria-expanded="false" aria-controls="siteMap__accordionCollapse__company">
+          Company
+        </button>
+      </h2>
+      <div id="siteMap__accordionCollapse__company" class="accordion-collapse collapse" aria-labelledby="siteMap__accordionHeading__company" data-bs-parent="#accordion_siteMap">
+        <div class="accordion-body">
           <ul class="siteMap__list">
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Provided services</a></li>

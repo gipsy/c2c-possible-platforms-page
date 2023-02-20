@@ -21,4 +21,31 @@
       }
     }
   }
+  &__accordionButton {
+    outline: none;
+    @media (max-width: 575.98px) {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 700;
+      outline: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      text-transform: uppercase;
+    }
+  }
+  &__accordionItem {
+    outline: none;
+    border: 0;
+    &:first-of-type {
+      button {
+        @media (max-width: 575.98px) {
+          border-top-left-radius: 0 !important;
+          border-top-right-radius: 0 !important;
+        }
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }

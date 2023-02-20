@@ -16,6 +16,9 @@
     .platformSearchFilter__inputClear {
       display: block;
     }
+    .platformSearchFilter__label:before {
+      display: block;
+    }
   }
 
   &__label {
@@ -24,6 +27,17 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    &:before {
+      display: none;
+      content: '';
+      height: 1px;
+      left: 30px;
+      right: 30px;
+      background-color: #02aeef;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
   }
 
   &__inputClear {
@@ -39,6 +53,11 @@
   }
 
   &__input {
+    @media (max-width: 575.98px) {
+      height: 50px;
+      font-size: 14px;
+      line-height: 17px;
+    }
     color: $deep-blue;
     height: 80px;
     width: 100%;
@@ -75,17 +94,12 @@
     overflow: auto;
     display: none;
     position: relative;
-    &:before {
-      content: '';
-      height: 1px;
-      left: 30px;
-      right: 30px;
-      background-color: #02aeef;
-      position: absolute;
-      top: 0;
-    }
   }
   &__item {
+    @media (max-width: 575.98px) {
+      font-size: 10px;
+      line-height: 35px;
+    }
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;

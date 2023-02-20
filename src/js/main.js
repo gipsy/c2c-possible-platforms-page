@@ -8,6 +8,8 @@ import { Dropdown, Offcanvas, Popover } from 'bootstrap';
 const dropdownEls = document.querySelectorAll('.navbarJS__item')
 const dropdownNestedEls = document.querySelectorAll('.navbarJS__item--nested')
 
+
+let viewportWidth = window.innerWidth;
 function dropdownList(els, config = {}) {
     [...els].map(element => {
         const dropdownTrigger = element.children[0]
@@ -64,15 +66,23 @@ async function renderPlatformSearchResults(target) {
             target.classList.add('show');
         }
 
+        const template = viewportWidth > 575.98 ? `
+            <div class="row">
+                <div class="col col-3">${renderColumn(filteredPlatforms, 0, 4, input)}</div>
+                <div class="col col-3">${renderColumn(filteredPlatforms, 1, 4, input)}</div>
+                <div class="col col-3">${renderColumn(filteredPlatforms, 2, 4, input)}</div>
+                <div class="col col-3">${renderColumn(filteredPlatforms, 3, 4, input)}</div>
+            </div>
+            <p class="platformSearchFilter__note">Haven’t found your cart in the list? <a href="#">Go here for more info.</a></p>
+        ` : `
+            <div class="row">
+                <div class="col col-6">${renderColumn(filteredPlatforms, 0, 2, input)}</div>
+                <div class="col col-6">${renderColumn(filteredPlatforms, 1, 2, input)}</div>
+            </div>
+        `;
+
         filteredPlatforms = data.platforms.filter(platform => platform.toLowerCase().includes(input.toLowerCase()))
-        resultHtml.innerHTML = filteredPlatforms.length === 0 ? 'No results' : `
-        <div class="row">
-            <div class="col col-3">${renderColumn(filteredPlatforms, 0, 4, input)}</div>
-            <div class="col col-3">${renderColumn(filteredPlatforms, 1, 4, input)}</div>
-            <div class="col col-3">${renderColumn(filteredPlatforms, 2, 4, input)}</div>
-            <div class="col col-3">${renderColumn(filteredPlatforms, 3, 4, input)}</div>
-        </div>
-        <p class="platformSearchFilter__note">Haven’t found your cart in the list? <a href="#">Go here for more info.</a></p>`;
+        resultHtml.innerHTML = filteredPlatforms.length === 0 ? 'No results' : template
         target.getElementsByTagName('label')[0].after(resultHtml)
     };
 }
@@ -116,19 +126,28 @@ async function renderPlatformAlphabetResults(target) {
 
             return results.map(item => `<a class="platformAlphabetFilter__item" href="#">${item}</a>`).join("\n")
         }
-        const template = (k) => `
+        const template = (k) => viewportWidth > 575.98 ? `
             <div class="row platformAlphabetFilter__row">
-                <div class="col-3">
+                <div class="col col-3">
                     <div class="platformAlphabetFilter__letter">${k}</div>
                 </div>
-                <div class="col-3">
+                <div class="col col-3">
                     ${renderColumn(groupedResults(results)[k], 0, 3)}
                 </div>
-                <div class="col-3">
+                <div class="col col-3">
                     ${renderColumn(groupedResults(results)[k], 1, 3)}
                 </div>
-                <div class="col-3">
+                <div class="col col-3">
                     ${renderColumn(groupedResults(results)[k], 2, 3)}
+                </div>
+            </div>
+        `: `
+            <div class="row platformAlphabetFilter__row">
+                <div class="col col-3">
+                    <div class="platformAlphabetFilter__letter">${k}</div>
+                </div>
+                <div class="col col-9">
+                    ${renderColumn(groupedResults(results)[k], 0, 1)}
                 </div>
             </div>
         `;
@@ -140,7 +159,7 @@ async function renderPlatformAlphabetResults(target) {
                 return template(k)
             }).sort().join('\n');
 
-        this.after(resultHtml)
+        this.parentNode.after(resultHtml)
     }
     target.querySelector('ul').addEventListener('click', makeChoice, false);
     const initChoice = () => target.querySelector('ul')

@@ -5,6 +5,11 @@
     line-height: 56px;
     font-weight: 600;
     margin-bottom: 1.2rem;
+    @media (max-width: 575.98px) {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 38px;
+    }
   }
   &__subHeading {
     font-size: 1.375rem;
@@ -14,9 +19,17 @@
     color: $light-white;
     max-width: 700px;
     margin: 0 auto;
+    @media (max-width: 575.98px) {
+      font-size: 12px;
+      line-height: 24px;
+    }
   }
 
   &__searchPlatform {
+    @media (max-width: 575.98px) {
+      height: auto;
+      padding: 67px 0;
+    }
     height: 440px;
     text-align: center;
     color: white;
@@ -26,6 +39,9 @@
     position: relative;
     padding-top: 80px;
     &:after {
+      @media (max-width: 575.98px) {
+        display: none;
+      }
       content: '';
       position: absolute;
       background-image: url('../svg/decoration_ellipse.svg');
@@ -47,5 +63,15 @@
   }
   &__siteMap {
     padding: 85px 0;
+    @media (max-width: 575.98px) {
+      padding: 25px 0;
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: 575.98px) {
+        display: block;
+      }
+    }
   }
 }

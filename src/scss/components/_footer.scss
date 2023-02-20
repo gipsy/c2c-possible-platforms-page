@@ -3,11 +3,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    height: 200px;
+  }
   &__copyrightText {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
     margin: 0;
+    @media (max-width: 575.98px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   &__socialsBlock {
     display: flex;

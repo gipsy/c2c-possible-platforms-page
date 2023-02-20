@@ -1,16 +1,23 @@
 .button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-width: 262px;
+  height: 54px;
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 100%;
+    height: 17px;
+  }
   &__primary {
     background: $glossy-blue;
+    border-color: $glossy-blue;
   }
   &__secondary {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-    text-transform: uppercase;
     border-color: $tropical-shades;
     color: $tropical-shades;
-    min-width: 262px;
-    height: 54px;
     &:hover {
       background: $tropical-shades;
       border-color: $tropical-shades;

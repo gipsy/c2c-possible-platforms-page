@@ -69,6 +69,7 @@
     }
     &--mobile {
       display: none;
+      margin-top: 1rem;
       @media (max-width: 575.98px) {
         display: block;
       }

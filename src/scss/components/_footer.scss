@@ -1,3 +1,18 @@
 .footer {
-  margin-top:3rem;
+  margin-bottom:3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__copyrightText {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  &__socialsBlock {
+    display: flex;
+  }
+  &__socialIcon {
+    margin-left: 5px;
+  }
 }

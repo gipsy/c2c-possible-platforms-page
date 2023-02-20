@@ -1,2 +1,4 @@
 /node_modules/
+/src/dist/
 .DS_Store
+.idea/vcs.xml
